@@ -1,0 +1,41 @@
+{
+  "name": "panda-bot-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "yarn build:ts && node dist/index.js",
+    "deploy-commands:test": "node scripts/deployGuildCommands.js",
+    "deploy-commands:global": "node scripts/deployGlobalCommands.js",
+    "lint:fix": "yarn eslint --fix '**/*.js' '**/*.ts' && prettier --write '**/*.{js,ts,json,md}'",
+    "build:ts": "tsc -p .tsconfig",
+    "watch": "tsc -p .tsconfig -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "@types/node": "^16.10.1",
+    "@types/ramda": "^0.27.45",
+    "discord-api-types": "^0.23.1",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
+    "inversify": "^5.1.1",
+    "ramda": "^0.27.1",
+    "reflect-metadata": "^0.1.13",
+    "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.22",
+    "@types/mocha": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "mocha": "^9.1.2",
+    "prettier": "^2.4.1",
+    "ts-mockito": "^2.6.1",
+    "ts-node": "^10.2.1"
+  }
+}
