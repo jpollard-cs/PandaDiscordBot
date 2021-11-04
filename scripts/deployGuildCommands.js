@@ -11,10 +11,9 @@ const guildId = process.env.TEST_GUILD_ID;
 // todo have this populate dynamically here and in global command file
 // investigate using discordx library
 const commands = [
-	// new SlashCommandBuilder().setName('pandajoke').setDescription('Replies with a panda joke!'),
-	// new SlashCommandBuilder().setName('pandafact').setDescription('Replies with a panda fact!'),
-	// new SlashCommandBuilder().setName('pandaprediction').setDescription('Replies with a panda prediction!'),
-	new SlashCommandBuilder().setName('checklogs').setDescription('replies with audit logs'),
+	new SlashCommandBuilder().setName('pandajoke').setDescription('Replies with a panda joke!'),
+	new SlashCommandBuilder().setName('pandafact').setDescription('Replies with a panda fact!'),
+	// new SlashCommandBuilder().setName('checklogs').setDescription('replies with audit logs'),
 ]
 	.map(command => command.toJSON());
 

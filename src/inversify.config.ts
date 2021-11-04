@@ -4,7 +4,7 @@ import { TYPES } from './types';
 import { Bot } from './bot';
 import { Client, Intents } from 'discord.js';
 import { CommandProcessor } from './commandProcessor';
-import { checkLogsCommandHandler, factCommandHandler, jokeCommandHandler, predictionCommandHandler } from './command';
+import { checkLogsCommandHandler, factCommandHandler, jokeCommandHandler } from './command';
 
 const container = new Container();
 
@@ -16,7 +16,6 @@ container.bind < string > (TYPES.Token).toConstantValue(process.env.TOKEN);
 const commandProcessor = new CommandProcessor();
 commandProcessor.register(jokeCommandHandler);
 commandProcessor.register(factCommandHandler);
-commandProcessor.register(predictionCommandHandler);
 commandProcessor.register(checkLogsCommandHandler);
 
 container.bind < CommandProcessor > (TYPES.CommandProcessor).toConstantValue(commandProcessor);
